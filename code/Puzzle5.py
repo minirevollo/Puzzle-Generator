@@ -9,6 +9,7 @@ member of the erfindergarden
 from random import randint 
 from tkinter import *
 from time import *
+import os #für die Vorschau
 
 
 
@@ -218,10 +219,10 @@ class PUZZLE:
         self.svg.write("\n</g>")
         self.svg.close()
         
-    def ausgabebestaetigung(self):
-        ### Feedback an den user.###
-        
-        print("\n Das Puzzle wurde in der Datei " + self.name + " abgespeichert\n und hat " + str(self.zeilen) + " x " + str(self.reihen) + " Teile" )
+    def anzeigen(self):
+        ###Öffnet über das Betriebssystem den hinterlegeten SVG-Viewer.###
+
+        os.startfile(self.name)
         
 class FENSTER:
     ###Stellt alle Einstellungen für die erste Ansicht zur Verfügung.###
@@ -265,7 +266,8 @@ class FENSTER:
         ausgabetext = "das Puzzle wurde mit \n" + str(reihen) + " x " + str(zeilen) + " \n Teilen erstellt"
         self.text_ausgabe = Label(text = ausgabetext, font = "Consolas", fg = "green", bg = "black", anchor = "center")    
         self.text_ausgabe.place(x = 0, y = 200, width = self.breite, height = 80) 
-         
+        
+        
 def puzzle_erstellen():
     ###.Erstellt das Puzzle und speichert es ab.###
     puzzle = PUZZLE(int(fenster.input_zeile.get()),int(fenster.input_reihe.get()),int(fenster.input_groesse.get()))
@@ -277,6 +279,7 @@ def puzzle_erstellen():
     puzzle.gruppe_ende()
     puzzle.text_erstellen()
     puzzle.schreiben_ende()
+    puzzle.anzeigen()
     fenster.bestätigung(puzzle.reihen, puzzle.zeilen)
                                                    
 """ Setup """
