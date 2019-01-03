@@ -24,6 +24,6 @@ So sieht dann das fertige Puzzle aus.
 
 Um für die Puzzle kein Material zu verschwenden bin ich auf die Idee mit den Bucheinbänden gekommen. Ein Leineneinband bietet sich gut für ein kleines, feines Puzzle an.
 
-<img width = "80%" src="IMG/puzzle_buch_1.jpg."/>
-<img width = "80%" src="IMG/puzzle_buch_2.jpg."/>
-<img width = "80%" src="IMG/puzzle_buch_3.jpg."/>
+<img width = "80%" src="IMG/puzzle_buch_1.jpg"/>
+<img width = "80%" src="IMG/puzzle_buch_2.jpg"/>
+<img width = "80%" src="IMG/puzzle_buch_3.jpg"/>
